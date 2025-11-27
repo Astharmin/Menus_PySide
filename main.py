@@ -12,19 +12,20 @@ class VentanaPrincipal(QMainWindow):
         self.setCentralWidget(etiqueta)
 
         barra = QToolBar('Barra de Herramientas')
+        barra.setIconSize(QSize(16,16))
         self.addToolBar(barra)
 
-        boton_accion = QAction('Boton', self)
-        barra.addAction(boton_accion)
+        boton_nuevo = QAction(QIcon('Src/nuevo.png'),'Nuevo', self)
+        barra.addAction(boton_nuevo)
 
         self.setStatusBar(QStatusBar(self))
-        boton_accion.setStatusTip('Boton de la barra')
+        boton_nuevo.setStatusTip('Nuevo Archivo')
 
-        boton_accion.triggered.connect(self.clik_barra)
-        boton_accion.setCheckable(True)
+        boton_nuevo.triggered.connect(self.clik_barraNuevo)
+        #boton_nuevo.setCheckable(True)
 
-    def clik_barra(self, s):
-        print(f'Prueba de click {s}')
+    def clik_barraNuevo(self, s):
+        print(f'Nuevo Archivo {s}')
 
 
 if __name__ == '__main__':
