@@ -13,6 +13,13 @@ class VentanaPrincipal(QMainWindow):
 
         barra = QToolBar('Barra de Herramientas')
         barra.setIconSize(QSize(16,16))
+
+        #barra.setToolButtonStyle(Qt.ToolButtonFollowStyle)
+        #barra.setToolButtonStyle(Qt.ToolButtonTextOnly)
+        #barra.setToolButtonStyle(Qt.ToolButtonIconOnly)
+        barra.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
+        #barra.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
+
         self.addToolBar(barra)
 
         boton_nuevo = QAction(QIcon('Src/nuevo.png'),'Nuevo', self)
