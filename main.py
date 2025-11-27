@@ -14,7 +14,7 @@ class VentanaPrincipal(QMainWindow):
         barra = QToolBar('Barra de Herramientas')
         barra.setIconSize(QSize(16,16))
 
-    #<--- Estilos en la paqueteria de QT del que prefieran --->
+    # <--- Estilos en la paqueteria de QT del que prefieran --->
 
         #barra.setToolButtonStyle(Qt.ToolButtonFollowStyle)
         #barra.setToolButtonStyle(Qt.ToolButtonTextOnly)
@@ -25,6 +25,8 @@ class VentanaPrincipal(QMainWindow):
         self.addToolBar(barra)
 
     #<--- Boton Nuevo --->
+        barra.addSeparator()
+
         boton_nuevo = QAction(QIcon('Src/nuevo.png'),'Nuevo', self)
         barra.addAction(boton_nuevo)
         self.setStatusBar(QStatusBar(self))
@@ -33,18 +35,28 @@ class VentanaPrincipal(QMainWindow):
         #boton_nuevo.setCheckable(True)
 
     # <--- Boton Guardar --->
+        barra.addSeparator()
+
         boton_guardar = QAction(QIcon('Src/guardar.png'),'Guardar', self)
         barra.addAction(boton_guardar)
         boton_guardar.setStatusTip('Guardar Archivo')
         boton_guardar.triggered.connect(self.clik_barraGuardar)
 
-        # <--- Boton Guardar --->
+    # <--- Boton Guardar --->
+        barra.addSeparator()
+
         boton_info = QAction(QIcon('Src/acerca.png'), 'Informacion', self)
         barra.addAction(boton_info)
         boton_info.setStatusTip('Informacion')
         boton_info.triggered.connect(self.clik_barraInfo)
 
-    # <--- Funcionalidades de cada boton --->
+    # <--- Boton Check --->
+        barra.addSeparator()
+
+        barra.addWidget(QCheckBox())
+        barra.addWidget(QLabel('Check'))
+
+# <--- Funcionalidades de cada boton --->
     def clik_barraGuardar(self, s):
         print(f'Guardando Arcvhivo... {s}')
 
