@@ -38,12 +38,21 @@ class VentanaPrincipal(QMainWindow):
         boton_guardar.setStatusTip('Guardar Archivo')
         boton_guardar.triggered.connect(self.clik_barraGuardar)
 
+        # <--- Boton Guardar --->
+        boton_info = QAction(QIcon('Src/acerca.png'), 'Informacion', self)
+        barra.addAction(boton_info)
+        boton_info.setStatusTip('Informacion')
+        boton_info.triggered.connect(self.clik_barraInfo)
+
     # <--- Funcionalidades de cada boton --->
     def clik_barraGuardar(self, s):
         print(f'Guardando Arcvhivo... {s}')
 
     def clik_barraNuevo(self, s):
         print(f'Nuevo Archivo {s}')
+
+    def clik_barraInfo(self, s):
+        print(f'Acerca de este archivo: {s}')
 
 
 if __name__ == '__main__':
