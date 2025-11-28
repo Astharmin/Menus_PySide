@@ -16,7 +16,7 @@ class VentanaPrincipal(QMainWindow):
         barra = QToolBar('Barra de Herramientas')
         barra.setIconSize(QSize(16, 16))
 
-        # <--- Estilos en la paqueteria de QT del que prefieran --->
+    # <--- Estilos en la paqueteria de QT del que prefieran --->
 
         # barra.setToolButtonStyle(Qt.ToolButtonFollowStyle)
         # barra.setToolButtonStyle(Qt.ToolButtonTextOnly)
