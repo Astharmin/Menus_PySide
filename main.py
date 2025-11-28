@@ -1,3 +1,5 @@
+import sys
+
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
@@ -101,7 +103,7 @@ class VentanaPrincipal(QMainWindow):
 
 
 if __name__ == '__main__':
-    app = QApplication([])
+    app = QApplication(sys.argv)
     ventana = VentanaPrincipal()
     ventana.show()
     app.exec()
