@@ -12,37 +12,37 @@ class VentanaPrincipal(QMainWindow):
         self.setCentralWidget(etiqueta)
 
         barra = QToolBar('Barra de Herramientas')
-        barra.setIconSize(QSize(16,16))
+        barra.setIconSize(QSize(16, 16))
 
-    # <--- Estilos en la paqueteria de QT del que prefieran --->
+        # <--- Estilos en la paqueteria de QT del que prefieran --->
 
-        #barra.setToolButtonStyle(Qt.ToolButtonFollowStyle)
-        #barra.setToolButtonStyle(Qt.ToolButtonTextOnly)
-        #barra.setToolButtonStyle(Qt.ToolButtonIconOnly)
+        # barra.setToolButtonStyle(Qt.ToolButtonFollowStyle)
+        # barra.setToolButtonStyle(Qt.ToolButtonTextOnly)
+        # barra.setToolButtonStyle(Qt.ToolButtonIconOnly)
         barra.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
-        #barra.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
+        # barra.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
 
         self.addToolBar(barra)
 
-    #<--- Boton Nuevo --->
+        # <--- Boton Nuevo --->
         barra.addSeparator()
 
-        boton_nuevo = QAction(QIcon('Src/nuevo.png'),'Nuevo', self)
+        boton_nuevo = QAction(QIcon('Src/nuevo.png'), 'Nuevo', self)
         barra.addAction(boton_nuevo)
         self.setStatusBar(QStatusBar(self))
         boton_nuevo.setStatusTip('Nuevo Archivo')
         boton_nuevo.triggered.connect(self.clik_barraNuevo)
-        #boton_nuevo.setCheckable(True)
+        # boton_nuevo.setCheckable(True)
 
-    # <--- Boton Guardar --->
+        # <--- Boton Guardar --->
         barra.addSeparator()
 
-        boton_guardar = QAction(QIcon('Src/guardar.png'),'Guardar', self)
+        boton_guardar = QAction(QIcon('Src/guardar.png'), 'Guardar', self)
         barra.addAction(boton_guardar)
         boton_guardar.setStatusTip('Guardar Archivo')
         boton_guardar.triggered.connect(self.clik_barraGuardar)
 
-    # <--- Boton Guardar --->
+        # <--- Boton Información --->
         barra.addSeparator()
 
         boton_info = QAction(QIcon('Src/acerca.png'), 'Informacion', self)
@@ -50,21 +50,44 @@ class VentanaPrincipal(QMainWindow):
         boton_info.setStatusTip('Informacion')
         boton_info.triggered.connect(self.clik_barraInfo)
 
-    # <--- Boton Check --->
+        # <--- Boton Check --->
         barra.addSeparator()
 
         barra.addWidget(QCheckBox())
         barra.addWidget(QLabel('Check'))
 
+        # Crear menú principal
+        menu = self.menuBar()
+
+        # Menú Archivo
+        menu_arch = menu.addMenu('&Archivo')
+        menu_arch.addAction(boton_nuevo)
+        menu_arch.addAction(boton_guardar)
+        menu_arch.addSeparator()
+
+        # <--- Botón Salir --->
+        boton_salir = QAction('Salir', self)
+        boton_salir.setStatusTip('Salir de la aplicación')
+        boton_salir.triggered.connect(self.clik_salir)
+        menu_arch.addAction(boton_salir)
+
+        # Menu Ayuda
+        menu_ayuda = menu.addMenu('&Ayuda')
+        menu_ayuda.addAction(boton_info)
+
 # <--- Funcionalidades de cada boton --->
     def clik_barraGuardar(self, s):
-        print(f'Guardando Arcvhivo... {s}')
+        print(f'Guardando Archivo... {s}')
 
     def clik_barraNuevo(self, s):
         print(f'Nuevo Archivo {s}')
 
     def clik_barraInfo(self, s):
         print(f'Acerca de este archivo: {s}')
+
+    def clik_salir(self):
+        print('Saliendo de la aplicación...')
+        self.close()
 
 
 if __name__ == '__main__':
