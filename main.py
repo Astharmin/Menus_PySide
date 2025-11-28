@@ -65,15 +65,25 @@ class VentanaPrincipal(QMainWindow):
         menu_arch.addAction(boton_guardar)
         menu_arch.addSeparator()
 
+        # Menu Ayuda
+        menu_ayuda = menu.addMenu('&Ayuda')
+        menu_ayuda.addAction(boton_info)
+
+        # Modulo de Sub menu
+        menu_arch.addSeparator()
+        menu_arch.addMenu(menu_ayuda)
+
         # <--- Botón Salir --->
         boton_salir = QAction('Salir', self)
         boton_salir.setStatusTip('Salir de la aplicación')
         boton_salir.triggered.connect(self.clik_salir)
         menu_arch.addAction(boton_salir)
 
-        # Menu Ayuda
-        menu_ayuda = menu.addMenu('&Ayuda')
-        menu_ayuda.addAction(boton_info)
+    # <--- Modulo de atajos --->
+        #boton_nuevo.setShortcut(QKeySequence('Ctrl+n'))
+        boton_nuevo.setShortcut(Qt.CTRL | Qt.Key_N)
+        boton_info.setShortcut(Qt.CTRL | Qt.Key_I)
+        boton_guardar.setShortcut(Qt.CTRL | Qt.Key_G)
 
 # <--- Funcionalidades de cada boton --->
     def clik_barraGuardar(self, s):
