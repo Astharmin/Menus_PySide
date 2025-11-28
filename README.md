@@ -149,9 +149,9 @@ pip install pyside6
 
 ## 🚀 Próximos Pasos y Mejoras Potenciales
 
-- [ ] **Agregar menús desplegables** tradicionales
+- [x] **Agregar menús desplegables** tradicionales
 - [ ] **Implementar diálogos de archivo** (QFileDialog)
-- [ ] **Agregar atajos de teclado** para acciones
+- [x] **Agregar atajos de teclado** para acciones
 - [ ] **Internacionalización** (soporte multiidioma)
 - [ ] **Temas personalizables** (dark/light mode)
 - [ ] **Sistema de plugins** para extensibilidad
