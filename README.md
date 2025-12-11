@@ -110,12 +110,12 @@ barra.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)  # Actual
 ### ⚙️ **Diferentes Estilos de Botones**
 | **Descripción** | **Vista** |
 |-----------------|-----------|
-| **Barra de herramientas** configurada para mostrar únicamente los iconos sin texto | <div align="center"><img src="./Src/ScreenShot/Screenshot_2.png" width="500" alt="Estilo Solo Iconos"/><br/>*Compacto: solo iconos para máxima eficiencia de espacio*</div> |
+| **Barra de herramientas deplegable** configurada para mostrar un modulo de menu desplegable para la navegacion de la app | <div align="center"><img src="./Src/ScreenShot/Screenshot_2.png" width="500" alt="Estilo Solo Iconos"/><br/>*Modulo: para su optima navegacion y agregar nuevas funciones*</div> |
 
 ### 📋 **Acciones con Texto**
 | **Descripción** | **Vista** |
 |-----------------|-----------|
-| **Versión de solo texto** de la barra de herramientas para accesibilidad o preferencias de usuario | <div align="center"><img src="./Src/ScreenShot/Screenshot_3.png" width="500" alt="Estilo Solo Texto"/><br/>*Accesible: solo texto para claridad*</div> |
+| **Modulo de Soporte:** para la informacion del producto a desplegar de la app | <div align="center"><img src="./Src/ScreenShot/Screenshot_3.png" width="500" alt="Estilo Solo Texto"/><br/>*Accesible: pala la infromacion del producto*</div> |
 
 **Nota:** Las capturas muestran cómo cambiar entre diferentes estilos de botones comentando/descomentando las líneas en `main.py`.
 
