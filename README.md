@@ -60,6 +60,7 @@ pip install -r requirements.txt
 pyside-menu-app/
 ├── 📁 main.py                 # Archivo principal de la aplicación
 ├── 📁 Src/                   # Recursos de la aplicación
+├── 📁 Src/                   # Recursos de la aplicación
 │   ├── 📁 nuevo.png          # Icono acción "Nuevo"
 │   ├── 📁 guardar.png        # Icono acción "Guardar"
 │   └── 📁 acerca.png         # Icono acción "Información"
