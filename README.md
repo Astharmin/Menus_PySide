@@ -57,14 +57,18 @@ pip install -r requirements.txt
 
 ### Estructura del Proyecto
 ```
-pyside-menu-app/
-├── 📁 main.py                 # Archivo principal de la aplicación
+Menu_PySide/
 ├── 📁 Src/                   # Recursos de la aplicación
-├── 📁 Src/                   # Recursos de la aplicación
-│   ├── 📁 nuevo.png          # Icono acción "Nuevo"
-│   ├── 📁 guardar.png        # Icono acción "Guardar"
-│   └── 📁 acerca.png         # Icono acción "Información"
-└── 📄 README.md              # Este archivo
+│   ├── 📁 ScreenShot/       # Capturas de pantalla
+│   │   ├── Screenshot_1.png    # Vista principal - Texto junto al icono
+│   │   ├── Screenshot_2.png    # Vista - Solo iconos
+│   │   └── Screenshot_3.png    # Vista - Solo texto
+│   ├── nuevo.png           # Icono acción "Nuevo"
+│   ├── guardar.png         # Icono acción "Guardar"
+│   └── acerca.png          # Icono acción "Información"
+├── 📄 main.py               # Archivo principal de la aplicación
+├── 📄 README.md             # Este archivo
+└── 📄 LICENSE              # Licencia MIT
 ```
 
 ## 🎯 Uso de la Aplicación
@@ -95,6 +99,25 @@ barra.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)  # Actual
 # barra.setToolButtonStyle(Qt.ToolButtonTextOnly)      # Solo texto
 # barra.setToolButtonStyle(Qt.ToolButtonTextUnderIcon) # Texto bajo icono
 ```
+
+## 📸 **Capturas de Pantalla**
+
+### 🎨 **Vista Principal - Barra de Herramientas**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Interfaz principal** de la aplicación mostrando la barra de herramientas con los tres botones principales (Nuevo, Guardar, Información) en estilo texto junto al icono | <div align="center"><img src="./Src/ScreenShot/Screenshot_1.png" width="500" alt="Interfaz Principal"/><br/>*Barra de herramientas con acciones y barra de estado*</div> |
+
+### ⚙️ **Diferentes Estilos de Botones**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Barra de herramientas** configurada para mostrar únicamente los iconos sin texto | <div align="center"><img src="./Src/ScreenShot/Screenshot_2.png" width="500" alt="Estilo Solo Iconos"/><br/>*Compacto: solo iconos para máxima eficiencia de espacio*</div> |
+
+### 📋 **Acciones con Texto**
+| **Descripción** | **Vista** |
+|-----------------|-----------|
+| **Versión de solo texto** de la barra de herramientas para accesibilidad o preferencias de usuario | <div align="center"><img src="./Src/ScreenShot/Screenshot_3.png" width="500" alt="Estilo Solo Texto"/><br/>*Accesible: solo texto para claridad*</div> |
+
+**Nota:** Las capturas muestran cómo cambiar entre diferentes estilos de botones comentando/descomentando las líneas en `main.py`.
 
 ## 🔧 Personalización
 
